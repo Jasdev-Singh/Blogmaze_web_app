@@ -10,7 +10,7 @@
       img{
         width: 120px; 
       }
-     
+    
     }*/
 
     .logohome{display: flex; justify-content: center; align-items: center; gap :4px; cursor: pointer;} 
