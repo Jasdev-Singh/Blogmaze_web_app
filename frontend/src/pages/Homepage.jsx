@@ -30,9 +30,10 @@ const Homepage = () => {
 const getText = (html) =>{
   const doc = new DOMParser().parseFromString(html,"text/html")
   return doc.body.textContent
-
-
 }
+  console.log("Homepage data:", posts);
+console.log("is array? in jhome", Array.isArray(posts));
+  
   return (
     <>
       <Navbar/>
