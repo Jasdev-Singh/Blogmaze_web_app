@@ -7,7 +7,6 @@ import { AuthContext } from '../context/authContext';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
 import { backendurl } from '../context/authContext';
-
 const Write = () => {
 
    const {setCurrentuser,currentuser}= useContext(AuthContext);
