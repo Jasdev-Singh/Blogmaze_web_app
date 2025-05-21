@@ -13,7 +13,6 @@ import Navbar from "./components/Navbar"
 import Footer from "./components/Footer"
 import Single from './pages/Single';
 import Write from "./pages/Write";
-
 /*
 //create a layout (navbar and footer)
 const Layout =() =>{
