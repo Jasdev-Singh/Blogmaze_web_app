@@ -7,7 +7,6 @@ export const getPosts = (req,res) =>{
         return res.status(200).json(data);
     });
 }
-
 //fetch data to show on single page
 export const getPost = (req,res) =>{
     //find post using its id, join users table to get username
