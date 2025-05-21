@@ -15,6 +15,7 @@ const Homepage = () => {
   useEffect(()=>{
     const fetchdata = async () =>{
       try{
+        console.log("Requesting:", `${backendurl}/api/posts${cat}`);
         const res = await axios.get(`${backendurl}/api/posts${cat}`)
         setPosts(res.data);
       }catch(err)
