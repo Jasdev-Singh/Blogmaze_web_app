@@ -9,7 +9,6 @@ const Register = () => {
     email:"",
     password:"",
   })
-
   //handle error if user exist
   const [err,setError] = useState(null)
 
