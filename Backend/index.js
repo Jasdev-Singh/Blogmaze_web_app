@@ -7,7 +7,7 @@ import cookieParser from "cookie-parser"
 import multer from "multer";
 
 const app =express()
-const frontendurl="http://localhost:3000";
+const frontendurl="https://blogmaze.up.railway.app";
 
 app.use(express.json())
 app.use(cors());
