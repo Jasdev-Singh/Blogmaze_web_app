@@ -13,7 +13,6 @@ const stopWords = new Set([
   'the', 'is', 'in', 'and', 'to', 'a', 'of', 'it', 'that', 'this', 'with', 'as', 'for', 'on', 'was',
   'but', 'are', 'by', 'be', 'or', 'not', 'from', 'at', 'an'
 ]);
-
 function stripHtml(html) {
   const tmp = document.createElement('div');
   tmp.innerHTML = html;
