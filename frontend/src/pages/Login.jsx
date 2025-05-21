@@ -5,7 +5,6 @@ import { AuthContext } from '../context/authContext'
 import Navbar from '../components/Navbar'
 import Footer from '../components/Footer'
 const Login = () => {
-
 const [inputs,setInputs] =useState({
     username: "",
     password:"",
