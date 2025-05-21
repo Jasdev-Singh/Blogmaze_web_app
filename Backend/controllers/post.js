@@ -42,7 +42,7 @@ export const addPost = (req,res) =>{
 
 export const deletePost = (req,res) =>{
     const postid=req.params.id
-    const q  = 'DELETE FROM posts WHERE `id` = ?; UPDATE posts SET `id` = `id`-1 where `id` > ?; set @nextId := (select IFNULL(max(id),0)+1 from posts); set @sql := CONCAT("alter table posts AUTO_INCREMENT= " , @nextId); PREPARE stmt FROM @sql; EXECUTE stmt; DEALLOCATE PREPARE stmt;' ; 
+    const q  = 'DELETE FROM Blogmaze_site.posts WHERE `id` = ?; UPDATE Blogmaze_site.posts SET `id` = `id`-1 where `id` > ?; set @nextId := (select IFNULL(max(id),0)+1 from Blogmaze_site.posts); set @sql := CONCAT("alter table Blogmaze_site.posts AUTO_INCREMENT= " , @nextId); PREPARE stmt FROM @sql; EXECUTE stmt; DEALLOCATE PREPARE stmt;' ; 
     db.query(q,[postid,postid],(err,data)=>{
         if (err) return res.status(403).json("You can delete only your post!");
 
