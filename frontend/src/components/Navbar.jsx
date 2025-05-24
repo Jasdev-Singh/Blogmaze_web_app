@@ -34,7 +34,8 @@ const refreshpage = ()=>{
 
 }
 
-
+const [isOpen, setIsOpen] = useState(false);
+const toggleMenu = () => setIsOpen(!isOpen);
   return (
     <div className='navbar'>
       <div className='container'>
@@ -44,24 +45,75 @@ const refreshpage = ()=>{
          <div > <img className='mainlogo' src={Logo} onClick={refreshpage} alt=""/></div>
           </Link>
         </div>
-        <div className='links'>
+
+        <div className='mobileviewtop'>
+     <Link className='link' to="/write"> <button className="writebuttonformobile">Write Blog</button> </Link>
+    <div className="hamburger" onClick={toggleMenu}>
+      ☰
+    </div>
+    </div>
+    <div className={`mobilemenu ${isOpen ? 'open' : ''}`}>
+      <div className="closebtn" onClick={toggleMenu}>×</div>
+      <div className="links">
+        <Link className='link' id="navlink" to='/home/?cat=art'  >
+              <h6 onClick={() => setActiveCat("art")} style={activeCat === "art" ? activeStyle : inactiveStyle}>ART </h6>
+          </Link>
+             
+          <Link className='link' id="navlink"  to='/home/?cat=science' >
+            <h6  onClick={() => setActiveCat("science")} style={activeCat === "science" ? activeStyle : inactiveStyle}>SCIENCE </h6>  
+          </Link>
+          
+          <Link className='link' id="navlink" to='/home/?cat=technology'  >
+              <h6 onClick={() => setActiveCat("technology")} style={activeCat === "technology" ? activeStyle : inactiveStyle}>TECHNOLOGY</h6>
+          </Link>
+          
+          <Link className='link' id="navlink" to='/home/?cat=cinema' >
+          <h6  onClick={() => setActiveCat("cinema")} style={activeCat === "cinema" ? activeStyle : inactiveStyle}>CINEMA</h6>
+          </Link>
+         
+          <Link className='link' id="navlink" to='/home/?cat=food'  >
+               <h6 onClick={() => setActiveCat("food")} style={activeCat === "food" ? activeStyle : inactiveStyle}>FOOD</h6>
+          </Link>
+        
+          <Link className='link'  id="navlink" to='/home/?cat=design'  >
+               <h6 className='lasth6' onClick={() => setActiveCat("design")} style={activeCat === "design" ? activeStyle : inactiveStyle}>DESIGN</h6>
+          </Link>
+        </div>
+        <br/>
+         <br></br>
+        <div className="navbaruserdata">
+          <img className='userlogomobile' src={userlogo} alt="userimage"/>
+          <span>Jasdev</span>
+        </div>
+        <br/>
+        <div className='logoutbtnmobile'>
+        <button className="logout-button"  onClick={handlelogout}>Logout</button></div> 
+   
+    </div>
+        
+        <div className='links' id="desktopnavbar" >
           <Link className='link' id="navlink" to='/home/?cat=art'  >
               <h6 onClick={() => setActiveCat("art")} style={activeCat === "art" ? activeStyle : inactiveStyle}>ART </h6>
           </Link>
+             <span className='navseparator'>|</span>
           <Link className='link' id="navlink"  to='/home/?cat=science' >
-            <span className='navseparator'>|</span>  <h6  onClick={() => setActiveCat("science")} style={activeCat === "science" ? activeStyle : inactiveStyle}>SCIENCE </h6>
+           <h6  onClick={() => setActiveCat("science")} style={activeCat === "science" ? activeStyle : inactiveStyle}>SCIENCE </h6>
           </Link>
+             <span className='navseparator'>|</span>
           <Link className='link' id="navlink" to='/home/?cat=technology'  >
-             <span className='navseparator'>|</span>   <h6 onClick={() => setActiveCat("technology")} style={activeCat === "technology" ? activeStyle : inactiveStyle}>TECHNOLOGY</h6>
+             <h6 onClick={() => setActiveCat("technology")} style={activeCat === "technology" ? activeStyle : inactiveStyle}>TECHNOLOGY</h6>
           </Link>
+             <span className='navseparator'>|</span>
           <Link className='link' id="navlink" to='/home/?cat=cinema' >
-            <span className='navseparator'>|</span>    <h6  onClick={() => setActiveCat("cinema")} style={activeCat === "cinema" ? activeStyle : inactiveStyle}>CINEMA</h6>
+            <h6  onClick={() => setActiveCat("cinema")} style={activeCat === "cinema" ? activeStyle : inactiveStyle}>CINEMA</h6>
           </Link>
+             <span className='navseparator'>|</span>
           <Link className='link' id="navlink" to='/home/?cat=food'  >
-             <span className='navseparator'>|</span>   <h6 onClick={() => setActiveCat("food")} style={activeCat === "food" ? activeStyle : inactiveStyle}>FOOD</h6>
+            <h6 onClick={() => setActiveCat("food")} style={activeCat === "food" ? activeStyle : inactiveStyle}>FOOD</h6>
           </Link>
+             <span className='navseparator'>|</span>
           <Link className='link'  id="navlink" to='/home/?cat=design'  >
-            <span className='navseparator'>|</span>    <h6 className='lasth6' onClick={() => setActiveCat("design")} style={activeCat === "design" ? activeStyle : inactiveStyle}>DESIGN</h6>
+           <h6 className='lasth6' onClick={() => setActiveCat("design")} style={activeCat === "design" ? activeStyle : inactiveStyle}>DESIGN</h6>
           </Link>
           </div>
           <div className='links' >
