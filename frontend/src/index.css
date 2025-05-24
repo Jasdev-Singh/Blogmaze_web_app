@@ -7,7 +7,12 @@
 
 
     .logohome{display: flex; justify-content: center; align-items: center; gap :4px; cursor: pointer;} 
-     .homelogo{width:20px; height:20px; margin-top: 3px;}
+       .homelogo{width:30px; height:30px; margin-top: 5px; border: 1px solid rgb(203, 220, 244);
+      padding: 6px; border-radius: 7px;}
+     .homelogo:hover{
+      background-color: rgb(216, 228, 245);
+     border: 1px solid rgb(108, 157, 226); ;
+     }
       .mainlogo{
         width: 120px; 
       }
@@ -532,6 +537,18 @@ h1{font-size: 20px;}
         }
       }
     }
+       @media (max-width: 768px) {
+    flex-direction: column; gap:10px;
+
+    .content{
+      h1{font-size: 28px;}
+    }
+  .posts{gap:10px;}
+   
+    &:nth-child(2n+1) {
+      flex-direction: column ;
+    }
+  }
   }
 }
 }
