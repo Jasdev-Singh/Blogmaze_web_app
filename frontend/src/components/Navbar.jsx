@@ -119,7 +119,7 @@ const toggleMenu = () => setIsOpen(!isOpen);
            <h6 className='lasth6' onClick={() => setActiveCat("design")} style={activeCat === "design" ? activeStyle : inactiveStyle}>DESIGN</h6>
           </Link>
           </div>
-          <div className='links' >
+          <div className='links'  id="desktopnavbar" >
         
           <div className="navbaruserdata"> <img className='userlogo' src={userlogo} alt=''/>{currentuser?.username}</div>
           <button id="logoutbtn" className="logout-button" onClick={handlelogout}>Logout</button>
