@@ -34,6 +34,8 @@ const refreshpage = ()=>{
 
 }
 
+const [isOpen, setIsOpen] = useState(false);
+const toggleMenu = () => setIsOpen(!isOpen);
 
   return (
     <div className='navbar'>
