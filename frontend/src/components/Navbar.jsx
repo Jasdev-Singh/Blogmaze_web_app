@@ -57,7 +57,8 @@ const toggleMenu = () => setIsOpen(!isOpen);
     {/* Mobile sliding menu */}
     <div className={`mobilemenu ${isOpen ? 'open' : ''}`}>
       <div className="closebtn" onClick={toggleMenu}>×</div>
-      <div className="links">
+      <div className="mobilenavlinks">
+         <h4>Choose Your Catergory</h4>
         <Link className='link' id="navlink" to='/home/?cat=art'  >
               <h6 onClick={() => setActiveCat("art")} style={activeCat === "art" ? activeStyle : inactiveStyle}>ART </h6>
           </Link>
