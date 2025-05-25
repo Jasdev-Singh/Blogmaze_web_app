@@ -138,7 +138,7 @@ const [summary, setSummary] = useState('');
       <Navbar/>
     <div className='single'>
       <div className='content'>
-        <img src={`../upload/${post?.img}`} alt=""/>
+        <img src={`${backendurl}/uploads/${post?.img}`} alt=""/>
       <div className='user'>
          {post.userimg && <img src={post?.userimg} alt=""/> }
       <div className='info'>
