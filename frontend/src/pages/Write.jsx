@@ -29,7 +29,7 @@ const Write = () => {
 
     }catch(err)
     {
-     console.log("there is an error hererer");
+     console.log(err)
     }
   }
 
@@ -49,9 +49,9 @@ console.log(formattedDate);
     const imgurl = await upload();
     try {
       state?await axios.put(`${backendurl}/api/posts/${state.id}`,{
-        title,desc:value,cat,img:file?imgurl:""
+        title,desc:value,cat,img:file?imgurl.filename:""
       }): await axios.post(`${backendurl}/api/posts/`,{
-        title,desc:value,cat,img:file?imgurl:"",date:formattedDate,uid:currentuser?.id});
+        title,desc:value,cat,img:file?imgurl.filename:"",date:formattedDate,uid:currentuser?.id});
 
         alert("Post Created Successfully!");
         navigate("/home");
