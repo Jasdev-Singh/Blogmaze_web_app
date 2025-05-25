@@ -44,7 +44,7 @@ console.log("is array? in jhome", Array.isArray(posts));
       {posts.map(post=>(
           <div className='post' key={post.id}>
             <div className="img"> 
-            <img src= {`../upload/${post.img}`} alt="You have not uploaded any image yet" /> 
+            <img src= {`${backendurl}/uploads/${post.img}`} alt="You have not uploaded any image yet" /> 
             </div>
             <div className="content"> 
             <Link className='link' to={`/post/${post.id}`}>
