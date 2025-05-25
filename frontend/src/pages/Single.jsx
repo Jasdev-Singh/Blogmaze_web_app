@@ -143,7 +143,7 @@ const [summary, setSummary] = useState('');
          {post.userimg && <img src={post?.userimg} alt=""/> }
       <div className='info'>
       <span>Posted By: {post?.username} </span>
-      <p>Posted this {moment.utc(post.date).local().fromNow()}</p>
+      <p>Posted this on {post.date}</p>
       </div>
      {currentuser && currentuser.username === post.username &&
       <div className="edit">
