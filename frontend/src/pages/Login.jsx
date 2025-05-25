@@ -75,7 +75,7 @@ const [inputs,setInputs] =useState({
         </div>
 
         <button type="submit"  className="btn-primary" onClick={handlesubmit}>Login</button>
-        {err &&<p>{err}</p>}
+        {err &&<p className="loginerrmsg">{err}</p>}
 
         <p  className="signup-text">
           <span className='loginwelcometext'>Don't you have an account? <Link to="/register">Register</Link></span>
