@@ -29,7 +29,7 @@ const Write = () => {
 
     }catch(err)
     {
-     console.log(err)
+     console.log("there is an error hererer);
     }
   }
 
