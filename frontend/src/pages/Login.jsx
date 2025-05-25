@@ -58,7 +58,7 @@ const [inputs,setInputs] =useState({
     </div>
     <div  className="right-panel">
       <form  className="login-form">
-        <h2 className='loginwelcometext'>Login</h2>
+        <h2 className='loginwelcometext'>Login to Continue</h2>
         <p className='loginwelcometext'>Join trending topics, and share your stories.</p>
 
         <div  className="input-group">
@@ -74,7 +74,7 @@ const [inputs,setInputs] =useState({
           </label>
         </div>
 
-        <button type="submit"  className="btn-primary" onClick={handlesubmit}>Login to Continue</button>
+        <button type="submit"  className="btn-primary" onClick={handlesubmit}>Login</button>
         {err &&<p>{err}</p>}
 
         <p  className="signup-text">
